@@ -1,0 +1,78 @@
+/* src/components/Header/Header.css */
+
+.header {
+  position: sticky; /* Sabit değil, sticky (orijinaldeki gibi) */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem 5%;
+  background-color: #ffffff; /* Arka plan BEYAZ */
+  border-bottom: 1px solid #e1e4e8;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center; /* İçeriği ortala */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* --- LOGO AYARLARI --- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0056b3; /* Marka mavisi */
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* --- LİNKLERİN AYARLARI --- */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333333; /* SİYAH YAZI */
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0056b3; /* Üzerine gelince mavi */
+}
+
+/* --- JOIN US BUTONU --- */
+.join-btn a {
+  background-color: #0056b3;
+  padding: 8px 20px;
+  border-radius: 6px;
+  color: #fff !important; /* Buton yazısı beyaz kalsın */
+  font-weight: bold;
+}
+
+.join-btn a:hover {
+  background-color: #003d80;
+}
+
+.hamburger-menu {
+  display: none;
+}

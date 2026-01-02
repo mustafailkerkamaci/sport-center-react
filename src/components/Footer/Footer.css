@@ -1,0 +1,77 @@
+/* src/components/Footer/Footer.css */
+
+.main-footer {
+  background-color: #0056b3; /* Koyu Mavi */
+  color: #fff;
+  padding-top: 4rem;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Eşit Sütun */
+  gap: 2rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.footer-desc {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* En alt şerit */
+.footer-bottom {
+  background-color: #003d80; /* Daha koyu ton */
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Mobilde tek sütun */
+    gap: 2.5rem;
+  }
+}

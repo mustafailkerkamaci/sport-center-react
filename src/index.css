@@ -1,0 +1,40 @@
+/* src/index.css - GLOBAL AYARLAR */
+:root {
+    --primary-blue: #0056b3;       /* marka rengi */
+    --hover-blue: #003d80;         /* buton hover rengi */
+    --bg-light-blue: #f0f8ff;      /* arkplan */
+    --text-primary: #333333;       
+    --text-secondary: #666666;     
+    --color-white: #ffffff;        
+    --radius-md: 6px;              
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--color-white);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Senin "btn-primary" sınıfın genel olduğu için buraya koydum */
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block; /* Kayma yapmaması için */
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-blue);
+}

@@ -1,0 +1,146 @@
+/* src/components/Classes/Classes.css */
+
+.classes-section {
+  padding: 4rem 5%;
+  background-color: #ffffff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  color: #0056b3;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background-color: #fd7e14; /* Turuncu */
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.section-desc {
+  color: #666666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- BUTONLAR --- */
+.class-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.class-btn {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.class-btn:hover {
+  background-color: #003d80;
+}
+
+/* Aktif Buton (Turuncu) */
+.class-btn.active {
+  background-color: #fd7e14;
+}
+
+/* Butonun altındaki üçgen ok */
+.class-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #fd7e14 transparent transparent transparent;
+}
+
+/* --- İÇERİK ALANI --- */
+.class-content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.class-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Yarı yarıya böl */
+  gap: 3rem;
+  align-items: center;
+  /* Animasyon ekleyelim ki geçiş yumuşak olsun */
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.text-col h3 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.text-col p {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.schedule-title {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.schedule-list {
+  list-style: none;
+}
+
+.schedule-list li {
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.img-col img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  object-fit: cover;
+  max-height: 400px;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+  .class-content {
+    grid-template-columns: 1fr; /* Mobilde alt alta */
+  }
+  .class-buttons-container {
+    gap: 0.5rem;
+  }
+  .class-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

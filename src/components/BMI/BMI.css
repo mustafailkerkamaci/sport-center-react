@@ -1,0 +1,123 @@
+/* src/components/BMI/BMI.css */
+
+.bmi-section {
+  padding: 4rem 5%;
+  background-color: #f0f8ff; /* Açık mavi arka plan */
+}
+
+.bmi-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+/* --- SOL TARAF --- */
+.bmi-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-desc {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.bmi-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  position: relative;
+  width: 50%;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-group input:focus {
+  border-color: #0056b3;
+}
+
+.input-group label {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-weight: bold;
+}
+
+.bmi-result-area {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#bmi-value {
+  color: #0056b3;
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+/* --- GRAFİK ÇUBUĞU --- */
+.bmi-chart-container {
+  position: relative;
+  margin-top: 1rem;
+  padding-bottom: 20px;
+}
+
+.bmi-bar {
+  height: 10px;
+  border-radius: 5px;
+  width: 100%;
+  /* Mavi -> Yeşil -> Turuncu -> Kırmızı */
+  background: linear-gradient(to right, #3498db 0%, #3498db 18.5%, #2ecc71 18.5%, #2ecc71 49.9%, #fd7e14 50%, #fd7e14 80%, #e74c3c 80%, #e74c3c 100%);
+}
+
+.bmi-marker {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent; 
+  border-right: 10px solid transparent;
+  border-top: 15px solid #333; /* Siyah üçgen ok */
+  position: absolute;
+  top: -20px; /* Çubuğun üstünde */
+  /* left değeri React tarafından verilecek */
+  transition: left 0.3s ease; /* Kayma efekti */
+}
+
+.bmi-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* --- SAĞ TARAF RESİM --- */
+.bmi-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.bmi-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .bmi-container {
+    flex-direction: column;
+  }
+}

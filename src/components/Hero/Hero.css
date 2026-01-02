@@ -1,0 +1,39 @@
+/* src/components/Hero/Hero.css */
+
+.hero-section {
+    /* Resim public klasöründe olduğu için başına / koyuyoruz */
+    background-image: url('/images/arkaplan1.png');
+    
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat;
+    
+    padding: 12rem 5% 8rem 5%; /* Header sticky olduğu için üst boşluğu artırdım */
+    text-align: center;
+    position: relative; /* Z-index sorunları olmasın diye */
+}
+
+.hero-content {
+    max-width: 800px; /* Yazı çok yayılmasın */
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 800; /* Biraz daha kalın */
+}
+
+.highlight-text {
+    color: var(--primary-blue); 
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: #000000;      
+    font-weight: 700;    
+    max-width: 600px;
+    margin: 0 auto 2rem auto; 
+}

@@ -1,0 +1,75 @@
+/* src/components/Review/Review.css */
+
+.review-section {
+  padding: 5rem 5%;
+  background-color: #f0f8ff; /* Açık mavi arka plan */
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap; /* Mobilde alt alta geçsin */
+}
+
+.review-card {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Merkeze hizala */
+}
+
+/* --- KONUŞMA BALONU --- */
+.review-bubble {
+  background-color: #0056b3; /* Mavi arka plan */
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  position: relative; /* Ok işareti için gerekli */
+  box-shadow: 0 10px 20px rgba(0, 86, 179, 0.2);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-style: italic;
+  transition: all 0.3s ease;
+}
+
+/* Balonun altındaki küçük üçgen ok */
+.review-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -15px; /* Balonun altına it */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 15px 15px 0;
+  border-style: solid;
+  border-color: #0056b3 transparent transparent transparent;
+  transition: all 0.3s ease;
+}
+
+/* --- MÜŞTERİ BİLGİLERİ --- */
+.client-info {
+  text-align: center;
+}
+
+.client-name {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.client-type {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* --- HOVER EFEKTLERİ --- */
+.review-card:hover .review-bubble {
+  transform: translateY(-5px);
+  background-color: #003d80; /* Daha koyu mavi */
+}
+
+.review-card:hover .review-bubble::after {
+  border-color: #003d80 transparent transparent transparent;
+}
